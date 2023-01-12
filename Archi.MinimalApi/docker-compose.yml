@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  webapiminimal:
+    image: ${DOCKER_REGISTRY-}webapiminimal
+    build:
+      context: .
+      dockerfile: WebApiMinimal/Dockerfile
