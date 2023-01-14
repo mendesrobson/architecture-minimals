@@ -18,7 +18,7 @@ namespace Infra.Extensions
 
             foreach(var type in registrar)
             {
-                dynamic? configInstance = Activator.CreateInstance(type);
+                dynamic configInstance = Activator.CreateInstance(type);
                 builder.ApplyConfiguration(configInstance);
             }
         }
