@@ -5,9 +5,9 @@ namespace Domain.Aggregates.PerfilUsuarioAggregate
 {
     public class InfoUsuarios
     {
-        public InfoUsuarios(string nome, 
-                         string sobreNome, 
-                         string email, 
+        public InfoUsuarios(string nome,
+                         string sobreNome,
+                         string email,
                          string telefone)
         {
             Nome = nome;
@@ -16,7 +16,7 @@ namespace Domain.Aggregates.PerfilUsuarioAggregate
             Telefone = telefone;
         }
 
-        private InfoUsuarios() {}
+        private InfoUsuarios() { }
 
         public string Nome { get; private set; }
         public string SobreNome { get; private set; }
@@ -32,9 +32,9 @@ namespace Domain.Aggregates.PerfilUsuarioAggregate
 
             InfoUsuarios usuario = new()
             {
-                Nome= nome,
-                SobreNome= sobreNome,
-                Email= email,
+                Nome = nome,
+                SobreNome = sobreNome,
+                Email = email,
                 Telefone = telefone
             };
 
@@ -44,7 +44,7 @@ namespace Domain.Aggregates.PerfilUsuarioAggregate
 
             var exception = new UsuarioPerfilNotifException("O UsuarioPerfil não e valido.");
 
-            foreach(var erro in valid.Errors)
+            foreach (var erro in valid.Errors)
             {
                 exception.ValidationErrors.Add(erro.ErrorMessage);
             }

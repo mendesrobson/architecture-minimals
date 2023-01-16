@@ -2,5 +2,4 @@
 
 public interface IRegister
 {
-    void RegisterServices(WebApplicationBuilder builder);
 }

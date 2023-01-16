@@ -1,9 +1,6 @@
-﻿using FluentValidation;
-using WebApiMinimal.Abstractions.EndpointDefinitions.Interfaces;
+﻿namespace WebApiMinimal.Registers;
 
-namespace WebApiMinimal.Registers;
-
-public class ValidateRegisters : IRegister
+public class ValidateRegisters : IWebAppBuilderRegister
 {
     public void RegisterServices(WebApplicationBuilder builder)
     {

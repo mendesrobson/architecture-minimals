@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Domain.Aggregates.PerfilUsuarioAggregate;
+﻿namespace Domain.Aggregates.PerfilUsuarioAggregate;
 
 public class PerfisUsuarios
 {

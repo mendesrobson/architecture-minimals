@@ -1,9 +1,4 @@
-﻿using Application.Enums;
-using Application.Models;
-using WebApiMinimal.Abstractions.EndpointDefinitions.Interfaces;
-using WebApiMinimal.Contracts.Common;
-
-namespace WebApiMinimal.Abstractions.EndpointDefinitions;
+﻿namespace WebApiMinimal.Abstractions.EndpointDefinitions;
 
 public abstract class EndpointDefinition : IEndpointDefinition
 {

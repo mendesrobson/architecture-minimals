@@ -1,12 +1,6 @@
-﻿using Application.Options;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using WebApiMinimal.Abstractions.EndpointDefinitions.Interfaces;
-
-namespace WebApiMinimal.Registers
+﻿namespace WebApiMinimal.Registers
 {
-    public class IdentityRegister : IRegister
+    public class IdentityRegister : IWebAppBuilderRegister
     {
         public void RegisterServices(WebApplicationBuilder builder)
         {

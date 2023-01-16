@@ -1,10 +1,9 @@
 ﻿using Domain.Aggregates.PerfilUsuarioAggregate;
 using FluentValidation;
-using System;
 
 namespace Domain.Validators.UsuarioPerfilValidate
 {
-    public class UsuarioValidate: AbstractValidator<InfoUsuarios>
+    public class UsuarioValidate : AbstractValidator<InfoUsuarios>
     {
         public UsuarioValidate()
         {

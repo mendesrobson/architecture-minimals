@@ -16,7 +16,7 @@ namespace Infra.Extensions
                                                     == typeof(IEntityTypeConfiguration<>)))
                                .ToList();
 
-            foreach(var type in registrar)
+            foreach (var type in registrar)
             {
                 dynamic configInstance = Activator.CreateInstance(type);
                 builder.ApplyConfiguration(configInstance);

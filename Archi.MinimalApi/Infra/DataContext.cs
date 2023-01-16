@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infra;
 
-public  class DataContext: IdentityDbContext
+public class DataContext : IdentityDbContext
 {
-    public DataContext(DbContextOptions options) 
-        : base(options){}
+    public DataContext(DbContextOptions options)
+        : base(options) { }
 
     public DbSet<PerfisUsuarios> PerfilUsuario { get; set; }
 

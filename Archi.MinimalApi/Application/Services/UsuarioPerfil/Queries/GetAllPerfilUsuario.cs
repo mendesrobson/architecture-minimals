@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Application.Services.UsuarioPerfil.Queries;
 
-public class GetAllPerfilUsuario:
+public class GetAllPerfilUsuario :
     IRequest<OperationResult<IEnumerable<PerfisUsuarios>>>
 {
 }

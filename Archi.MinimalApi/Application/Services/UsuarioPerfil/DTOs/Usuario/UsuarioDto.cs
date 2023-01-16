@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Domain.Aggregates.PerfilUsuarioAggregate;
+﻿using Domain.Aggregates.PerfilUsuarioAggregate;
 
 namespace Application.Services.UsuarioPerfil.DTOs.Usuario;
 

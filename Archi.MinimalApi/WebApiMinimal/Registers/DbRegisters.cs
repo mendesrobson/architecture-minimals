@@ -1,10 +1,6 @@
-﻿using WebApiMinimal.Abstractions.EndpointDefinitions.Interfaces;
-using Microsoft.EntityFrameworkCore;
-using Infra;
+﻿namespace WebApiMinimal.Registers;
 
-namespace WebApiMinimal.Registers;
-
-public class DbRegisters : IRegister
+public class DbRegisters : IWebAppBuilderRegister
 {
     public void RegisterServices(WebApplicationBuilder builder)
     {

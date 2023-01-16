@@ -1,10 +1,10 @@
 ﻿namespace WebApiMinimal.Registers
 {
-    public class ApplicationRegisters : IWebAppBuilderRegister
+    public class SwaggerRegister : IWebAppBuilderRegister
     {
         public void RegisterServices(WebApplicationBuilder builder)
         {
-            builder.Services.AddScoped<IdentityService>();
+            builder.Services.AddSwaggerGen();
         }
     }
 }

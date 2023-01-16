@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Application.Services.UsuarioPerfil.Commands
 {
-    public class UpdateUsuarioPerfil:
+    public class UpdateUsuarioPerfil :
         IRequest<OperationResult<PerfisUsuarios>>
     {
         public Guid PerfilUsuarioId { get; set; }

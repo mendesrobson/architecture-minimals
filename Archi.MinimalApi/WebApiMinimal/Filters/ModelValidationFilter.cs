@@ -1,9 +1,6 @@
-﻿using FluentValidation;
-using WebApiMinimal.Contracts.Common;
+﻿namespace WebApiMinimal.Filters;
 
-namespace WebApiMinimal.Filters;
-
-public class ModelValidationFilter<T>: ErrorGenerate, IEndpointFilter where T : class
+public class ModelValidationFilter<T> : ErrorGenerate, IEndpointFilter where T : class
 {
     private readonly IValidator<T> _validator;
 
@@ -12,7 +9,7 @@ public class ModelValidationFilter<T>: ErrorGenerate, IEndpointFilter where T : 
         _validator = validator;
     }
 
-    public async ValueTask<object> InvokeAsync(EndpointFilterInvocationContext context, 
+    public async ValueTask<object> InvokeAsync(EndpointFilterInvocationContext context,
                                                EndpointFilterDelegate next)
     {
         var model = context.Arguments

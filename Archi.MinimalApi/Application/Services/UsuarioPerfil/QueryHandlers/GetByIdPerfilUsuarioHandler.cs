@@ -2,15 +2,9 @@
 using Application.Models;
 using Application.Services.UsuarioPerfil.DTOs.Usuario;
 using Application.Services.UsuarioPerfil.Queries;
-using AutoMapper;
 using Infra;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Services.UsuarioPerfil.QueryHandlers;
 
@@ -24,7 +18,7 @@ internal class GetByIdPerfilUsuarioHandler :
         _ctx = ctx;
     }
 
-    public async Task<OperationResult<PerfilUsuarioDto>> Handle(GetByIdPerfilUsuario request, 
+    public async Task<OperationResult<PerfilUsuarioDto>> Handle(GetByIdPerfilUsuario request,
                                                     CancellationToken cancellationToken)
     {
         OperationResult<PerfilUsuarioDto> result = new();
@@ -34,10 +28,10 @@ internal class GetByIdPerfilUsuarioHandler :
                                .FirstOrDefaultAsync(cancellationToken: cancellationToken);
 
 
-        if(perfil is null)
+        if (perfil is null)
         {
             result.AddError(ErroCode.NotFound,
-                               string.Format(UsuarioPerfilErroMessage.UsuarioPerfilNotFound, 
+                               string.Format(UsuarioPerfilErroMessage.UsuarioPerfilNotFound,
                                              request.UsuarioPerfilId));
             return result;
         }

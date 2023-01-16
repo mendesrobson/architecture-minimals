@@ -1,6 +1,4 @@
-﻿using System.Security.Claims;
-
-namespace WebApiMinimal.Extensions;
+﻿namespace WebApiMinimal.Extensions;
 
 public static class HttpContextExtensions
 {

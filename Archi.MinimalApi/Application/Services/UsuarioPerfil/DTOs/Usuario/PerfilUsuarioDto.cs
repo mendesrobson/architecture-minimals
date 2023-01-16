@@ -1,11 +1,4 @@
-﻿using AutoMapper;
-using Domain.Aggregates.PerfilUsuarioAggregate;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using Domain.Aggregates.PerfilUsuarioAggregate;
 
 namespace Application.Services.UsuarioPerfil.DTOs.Usuario
 {

@@ -1,7 +1,4 @@
-﻿using FluentValidation;
-using WebApiMinimal.Contracts.UsuarioPerfil.Requests;
-
-namespace WebApiMinimal.Validators;
+﻿namespace WebApiMinimal.Validators;
 
 public class UsuarioPerfilUpdateValidate : AbstractValidator<UsuarioPerfilCreateUpdate>
 {

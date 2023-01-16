@@ -1,12 +1,10 @@
-﻿using WebApiMinimal.Abstractions.EndpointDefinitions.Interfaces;
-
-namespace WebApiMinimal.Extensions;
+﻿namespace WebApiMinimal.Extensions;
 
 public static class RegisterExtensions
 {
     public static void RegisterServices(this WebApplicationBuilder builder)
     {
-        var registrars = GetRegisters();
+        var registrars = GetRegistrars<IWebAppBuilderRegister>();
 
         foreach (var registrar in registrars)
         {
@@ -28,12 +26,21 @@ public static class RegisterExtensions
         }
     }
 
-    private static IEnumerable<IRegister> GetRegisters()
+    public static void RegisterPipelineComponents(this WebApplication app)
+    {
+        var registrars = GetRegistrars<IWebAppRegisters>();
+        foreach (var registrar in registrars)
+        {
+            registrar.RegisterServices(app);
+        }
+    }
+
+    private static IEnumerable<T> GetRegistrars<T>() where T : IRegister
     {
         var scanningType = typeof(Program);
         return scanningType.Assembly.GetTypes()
-            .Where(t => t.IsAssignableTo(typeof(IRegister)) && !t.IsAbstract && !t.IsInterface)
+            .Where(t => t.IsAssignableTo(typeof(T)) && !t.IsAbstract && !t.IsInterface)
             .Select(Activator.CreateInstance)
-            .Cast<IRegister>();
+            .Cast<T>();
     }
 }

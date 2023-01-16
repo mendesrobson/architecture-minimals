@@ -1,16 +1,11 @@
-using WebApiMinimal.Extensions;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.RegisterServices();
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
+builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 
-app.UseAuthentication();
-app.UseAuthorization();
-
-app.RegisterEndpointDefinitions();
+app.RegisterPipelineComponents();
 
 app.Run();

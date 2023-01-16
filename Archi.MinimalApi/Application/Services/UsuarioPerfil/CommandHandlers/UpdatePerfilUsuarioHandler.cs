@@ -1,10 +1,10 @@
-﻿using Application.Models;
+﻿using Application.Enums;
+using Application.Models;
 using Application.Services.UsuarioPerfil.Commands;
 using Domain.Aggregates.PerfilUsuarioAggregate;
+using Domain.Exceptions;
 using Infra;
 using MediatR;
-using Domain.Exceptions;
-using Application.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace Application.Services.UsuarioPerfil.CommandHandlers
@@ -50,7 +50,7 @@ namespace Application.Services.UsuarioPerfil.CommandHandlers
             }
             catch (UsuarioPerfilNotifException ex)
             {
-                ex.ValidationErrors.ForEach(e => 
+                ex.ValidationErrors.ForEach(e =>
                              result.AddError(ErroCode.ValidationError, e));
             }
             catch (Exception e)

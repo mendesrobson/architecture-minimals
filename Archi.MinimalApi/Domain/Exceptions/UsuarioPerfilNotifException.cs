@@ -1,12 +1,10 @@
-﻿using System;
+﻿namespace Domain.Exceptions;
 
-namespace Domain.Exceptions;
-
-public class UsuarioPerfilNotifException: DomainModelException
+public class UsuarioPerfilNotifException : DomainModelException
 {
     internal UsuarioPerfilNotifException() { }
-    internal UsuarioPerfilNotifException(string message) 
+    internal UsuarioPerfilNotifException(string message)
         : base(message) { }
-    internal UsuarioPerfilNotifException(string message, Exception inner) 
+    internal UsuarioPerfilNotifException(string message, Exception inner)
         : base(message, inner) { }
 }

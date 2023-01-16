@@ -1,6 +1,4 @@
-﻿using WebApiMinimal.Contracts.Common;
-
-namespace WebApiMinimal.Filters
+﻿namespace WebApiMinimal.Filters
 {
     public class GuidValidationFilter : ErrorGenerate, IEndpointFilter
     {

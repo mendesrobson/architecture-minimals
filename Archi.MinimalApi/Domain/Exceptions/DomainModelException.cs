@@ -1,25 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Domain.Exceptions
+﻿namespace Domain.Exceptions
 {
-    public abstract class DomainModelException: Exception
+    public abstract class DomainModelException : Exception
     {
         public List<string> ValidationErrors { get; }
 
-        internal DomainModelException() 
+        internal DomainModelException()
         {
             ValidationErrors = new();
         }
 
         internal DomainModelException(string message)
-            :base(message)
+            : base(message)
         {
             ValidationErrors = new();
         }
 
         internal DomainModelException(string message, Exception exception)
-            :base(message, exception)
+            : base(message, exception)
         {
             ValidationErrors = new();
         }

@@ -2,8 +2,8 @@
 
 public class ErroResponse
 {
-	public ErroResponse()
-	{
+    public ErroResponse()
+    {
         Erros = new();
 
     }

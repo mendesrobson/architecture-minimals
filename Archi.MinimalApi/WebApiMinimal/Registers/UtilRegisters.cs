@@ -1,10 +1,6 @@
-﻿using Application.Services.UsuarioPerfil.Queries;
-using MediatR;
-using WebApiMinimal.Abstractions.EndpointDefinitions.Interfaces;
+﻿namespace WebApiMinimal.Registers;
 
-namespace WebApiMinimal.Registers;
-
-public class UtilRegisters : IRegister
+public class UtilRegisters : IWebAppBuilderRegister
 {
     public void RegisterServices(WebApplicationBuilder builder)
     {

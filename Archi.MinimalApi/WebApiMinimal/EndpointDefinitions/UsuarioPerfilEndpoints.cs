@@ -1,11 +1,4 @@
-﻿using Application.Services.UsuarioPerfil.Queries;
-using AutoMapper;
-using MediatR;
-using WebApiMinimal.Abstractions.EndpointDefinitions;
-using WebApiMinimal.Contracts.UsuarioPerfil.Responses;
-using WebApiMinimal.Filters;
-
-namespace WebApiMinimal.EndpointDefinitions
+﻿namespace WebApiMinimal.EndpointDefinitions
 {
     public class UsuarioPerfilEndpoints : EndpointDefinition
     {
@@ -15,14 +8,16 @@ namespace WebApiMinimal.EndpointDefinitions
                                       .RequireAuthorization();
 
             userProfileGroup.MapGet("/", GetAllUserProfiles);
+            //.WithName("GetWeatherForecast")
+            //.WithOpenApi(); 
 
             userProfileGroup.MapGet(ApiRoutes.UsuarioPerfil.IdRoute, GetByIdPerfilUsuario)
                             .AddEndpointFilter<GuidValidationFilter>();
         }
 
 
-        private async Task<IResult> GetAllUserProfiles(IMediator mediator, 
-                                                       IMapper mapper, 
+        private async Task<IResult> GetAllUserProfiles(IMediator mediator,
+                                                       IMapper mapper,
                                                        CancellationToken token)
         {
             var query = new GetAllPerfilUsuario();
@@ -32,7 +27,7 @@ namespace WebApiMinimal.EndpointDefinitions
         }
 
 
-        private async Task<IResult> GetByIdPerfilUsuario(IMediator mediator, 
+        private async Task<IResult> GetByIdPerfilUsuario(IMediator mediator,
                                                        IMapper mapper, string id,
                                                        CancellationToken token)
         {
