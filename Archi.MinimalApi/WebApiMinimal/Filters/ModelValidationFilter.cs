@@ -13,7 +13,7 @@ public class ModelValidationFilter<T>: ErrorGenerate, IEndpointFilter where T : 
     }
 
     public async ValueTask<object> InvokeAsync(EndpointFilterInvocationContext context, 
-                                         EndpointFilterDelegate next)
+                                               EndpointFilterDelegate next)
     {
         var model = context.Arguments
                            .FirstOrDefault(a => a.GetType() == typeof(T)) as T;
