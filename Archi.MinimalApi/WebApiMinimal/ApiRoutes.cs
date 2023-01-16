@@ -2,7 +2,7 @@
 
 public static class ApiRoutes
 {
-    public const string Version = "api/v1";
+    public const string Version = "api/v{version:apiVersion}";
 
     public static class UsuarioPerfil
     {
