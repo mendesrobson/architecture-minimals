@@ -1,10 +1,9 @@
 ﻿using Application.Enums;
 
-namespace Application.Models
+namespace Application.Models;
+
+public class Error
 {
-    public class Error
-    {
-        public ErroCode Code { get; set; }
-        public string Message { get; set; }
-    }
+    public ErroCode Code { get; set; }
+    public string Message { get; set; }
 }
