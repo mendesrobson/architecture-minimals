@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>7691401d-0dd0-4871-8c06-5f5b99ee08a3</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/weatherforecast</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/v1</DockerServiceUrl>
     <DockerServiceName>webapiminimal</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>

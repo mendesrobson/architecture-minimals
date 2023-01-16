@@ -7,7 +7,7 @@ using Application.Options;
 
 namespace Application.Services
 {
-    internal class IdentityService
+    public class IdentityService
     {
         private readonly JwtSettings _jwtSettings;
         private readonly byte[] _key;
