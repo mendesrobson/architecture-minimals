@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace Application.Services.UsuarioPerfil.QueryHandlers;
 
 internal class GetByIdPerfilUsuarioHandler :
-    IRequestHandler<GetByIdPerfilUsuario, OperationResult<UsuarioDto>>
+    IRequestHandler<GetByIdPerfilUsuario, OperationResult<PerfilUsuarioDto>>
 {
     private readonly DataContext _ctx;
 
@@ -24,10 +24,10 @@ internal class GetByIdPerfilUsuarioHandler :
         _ctx = ctx;
     }
 
-    public async Task<OperationResult<UsuarioDto>> Handle(GetByIdPerfilUsuario request, 
+    public async Task<OperationResult<PerfilUsuarioDto>> Handle(GetByIdPerfilUsuario request, 
                                                     CancellationToken cancellationToken)
     {
-        OperationResult<UsuarioDto> result = new();
+        OperationResult<PerfilUsuarioDto> result = new();
 
         var perfil = await _ctx.PerfilUsuario
                                .Where(up => up.UsuarioPerfilId == request.UsuarioPerfilId)
@@ -42,7 +42,7 @@ internal class GetByIdPerfilUsuarioHandler :
             return result;
         }
 
-        result.Payload = UsuarioDto.FromUsuario(perfil);
+        result.Payload = PerfilUsuarioDto.FromPerfilUsuario(perfil);
         return result;
     }
 }

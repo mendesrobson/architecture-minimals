@@ -3,12 +3,12 @@ using Domain.Validators.UsuarioPerfilValidate;
 
 namespace Domain.Aggregates.PerfilUsuarioAggregate
 {
-    public class UsuariosInfo
+    public class BasicInfo
     {
-        public UsuariosInfo(string nome, 
-                               string sobreNome, 
-                               string email, 
-                               string telefone)
+        public BasicInfo(string nome, 
+                         string sobreNome, 
+                         string email, 
+                         string telefone)
         {
             Nome = nome;
             SobreNome = sobreNome;
@@ -16,21 +16,21 @@ namespace Domain.Aggregates.PerfilUsuarioAggregate
             Telefone = telefone;
         }
 
-        private UsuariosInfo() {}
+        private BasicInfo() {}
 
         public string Nome { get; private set; }
         public string SobreNome { get; private set; }
         public string Email { get; private set; }
         public string Telefone { get; private set; }
 
-        public static UsuariosInfo CreateUsuarioInfo(string nome,
+        public static BasicInfo CreateUsuarioInfo(string nome,
                                                         string sobreNome,
                                                         string email,
                                                         string telefone)
         {
             UsuarioValidate validations = new();
 
-            UsuariosInfo usuario = new()
+            BasicInfo usuario = new()
             {
                 Nome= nome,
                 SobreNome= sobreNome,

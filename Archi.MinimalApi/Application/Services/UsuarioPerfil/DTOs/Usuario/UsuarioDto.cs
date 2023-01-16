@@ -5,15 +5,19 @@ namespace Application.Services.UsuarioPerfil.DTOs.Usuario;
 
 public class UsuarioDto
 {
-    public Guid UsuarioPerfilId { get; set; }
-    public PerfilUsuario UsuarioPerdil { get; set; }
+    public string Nome { get; private set; }
+    public string SobreNome { get; private set; }
+    public string Email { get; private set; }
+    public string Telefone { get; private set; }
 
-    public static UsuarioDto FromUsuario(PerfilUsuario usuarios)
+    public static UsuarioDto FromUsuario(BasicInfo basicInfo)
     {
-        var usuarioDto = new UsuarioDto { UsuarioPerfilId = usuarios.UsuarioPerfilId };
-
-        return usuarioDto;
-
-
+        return new UsuarioDto
+        {
+            Nome = basicInfo.Nome,
+            SobreNome = basicInfo.SobreNome,
+            Email = basicInfo.Email,
+            Telefone = basicInfo.Telefone
+        };
     }
 }

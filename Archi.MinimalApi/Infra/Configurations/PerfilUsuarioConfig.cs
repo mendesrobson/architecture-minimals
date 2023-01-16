@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infra.Configurations
 {
-    internal class PerfilUsuarioConfig : IEntityTypeConfiguration<PerfilUsuario>
+    internal class PerfilUsuarioConfig : IEntityTypeConfiguration<UserProfile>
     {
-        public void Configure(EntityTypeBuilder<PerfilUsuario> builder)
+        public void Configure(EntityTypeBuilder<UserProfile> builder)
         {
             builder.OwnsOne(up => up.Usuario);
         }

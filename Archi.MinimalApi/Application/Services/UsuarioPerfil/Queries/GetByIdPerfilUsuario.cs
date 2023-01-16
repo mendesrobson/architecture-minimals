@@ -5,7 +5,7 @@ using MediatR;
 namespace Application.Services.UsuarioPerfil.Queries
 {
     public class GetByIdPerfilUsuario:
-        IRequest<OperationResult<UsuarioDto>>
+        IRequest<OperationResult<PerfilUsuarioDto>>
     {
         public Guid UsuarioPerfilId { get; set; }
     }

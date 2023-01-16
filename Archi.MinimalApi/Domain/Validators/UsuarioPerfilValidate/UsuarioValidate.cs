@@ -4,7 +4,7 @@ using System;
 
 namespace Domain.Validators.UsuarioPerfilValidate
 {
-    public class UsuarioValidate: AbstractValidator<UsuariosInfo>
+    public class UsuarioValidate: AbstractValidator<BasicInfo>
     {
         public UsuarioValidate()
         {

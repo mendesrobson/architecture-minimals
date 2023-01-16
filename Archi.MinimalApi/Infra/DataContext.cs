@@ -9,11 +9,11 @@ public  class DataContext: IdentityDbContext
     public DataContext(DbContextOptions options) 
         : base(options){}
 
-    public DbSet<PerfilUsuario> PerfilUsuario { get; set; }
+    public DbSet<UserProfile> PerfilUsuario { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Ignore<UsuariosInfo>();
+        modelBuilder.Ignore<BasicInfo>();
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(DataContext).Assembly);
         base.OnModelCreating(modelBuilder);
     }

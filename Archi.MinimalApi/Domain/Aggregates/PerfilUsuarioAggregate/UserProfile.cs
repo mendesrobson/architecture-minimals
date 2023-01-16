@@ -2,20 +2,20 @@
 
 namespace Domain.Aggregates.PerfilUsuarioAggregate;
 
-public class PerfilUsuario
+public class UserProfile
 {
-    private PerfilUsuario() { }
+    private UserProfile() { }
 
     public Guid UsuarioPerfilId { get; private set; }
     public string UsuarioIdentity { get; private set; }
-    public UsuariosInfo Usuario { get; private set; }
+    public BasicInfo Usuario { get; private set; }
     public DateTime DataCriacao { get; private set; }
     public DateTime DataModificacao { get; private set; }
 
     // factory
-    public static PerfilUsuario CreateUsuarioPerfil(string usuarioPerfilId, UsuariosInfo usuario)
+    public static UserProfile CreateUsuarioPerfil(string usuarioPerfilId, BasicInfo usuario)
     {
-        return new PerfilUsuario
+        return new UserProfile
         {
             UsuarioIdentity = usuarioPerfilId,
             Usuario = usuario,
@@ -24,7 +24,7 @@ public class PerfilUsuario
         };
     }
 
-    public void UpdateUsuario(UsuariosInfo usuario)
+    public void UpdateUsuario(BasicInfo usuario)
     {
         Usuario = usuario;
         DataModificacao = DateTime.UtcNow;

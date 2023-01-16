@@ -5,6 +5,6 @@ using MediatR;
 namespace Application.Services.UsuarioPerfil.Queries;
 
 public class GetAllPerfilUsuario:
-    IRequest<OperationResult<IEnumerable<PerfilUsuario>>>
+    IRequest<OperationResult<IEnumerable<UserProfile>>>
 {
 }
