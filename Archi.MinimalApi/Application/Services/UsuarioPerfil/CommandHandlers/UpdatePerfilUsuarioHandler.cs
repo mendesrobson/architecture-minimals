@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Application.Services.UsuarioPerfil.CommandHandlers
 {
     internal class UpdatePerfilUsuarioHandler
-        : IRequestHandler<UpdateUsuarioPerfil, OperationResult<UserProfile>>
+        : IRequestHandler<UpdateUsuarioPerfil, OperationResult<PerfisUsuarios>>
     {
         private readonly DataContext _ctx;
 
@@ -19,10 +19,10 @@ namespace Application.Services.UsuarioPerfil.CommandHandlers
             _ctx = ctx;
         }
 
-        public async Task<OperationResult<UserProfile>> Handle(UpdateUsuarioPerfil request,
+        public async Task<OperationResult<PerfisUsuarios>> Handle(UpdateUsuarioPerfil request,
                                                            CancellationToken cancellationToken)
         {
-            OperationResult<UserProfile> result = new();
+            OperationResult<PerfisUsuarios> result = new();
 
             try
             {
@@ -37,7 +37,7 @@ namespace Application.Services.UsuarioPerfil.CommandHandlers
                     return result;
                 }
 
-                var usuarioInfo = BasicInfo.CreateUsuarioInfo(request.Nome, request.SobreNome,
+                var usuarioInfo = InfoUsuarios.CreateUsuarioInfo(request.Nome, request.SobreNome,
                    request.Email, request.Teefone);
 
                 perfilUsuario.UpdateUsuario(usuarioInfo);

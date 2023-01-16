@@ -21,7 +21,7 @@ public class ModelValidationFilter<T>: ErrorGenerate, IEndpointFilter where T : 
         if (model is null)
         {
             var errorResponse = GenerateErrorResponse();
-            errorResponse.Erros.Add("Request body not in correct format");
+            errorResponse.Erros.Add("A solicação não esta no formato correto.");
             return Results.Json(errorResponse, statusCode: errorResponse.StatusCode);
         }
 

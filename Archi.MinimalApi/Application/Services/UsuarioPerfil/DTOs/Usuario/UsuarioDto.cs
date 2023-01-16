@@ -10,7 +10,7 @@ public class UsuarioDto
     public string Email { get; private set; }
     public string Telefone { get; private set; }
 
-    public static UsuarioDto FromUsuario(BasicInfo basicInfo)
+    public static UsuarioDto FromUsuario(InfoUsuarios basicInfo)
     {
         return new UsuarioDto
         {

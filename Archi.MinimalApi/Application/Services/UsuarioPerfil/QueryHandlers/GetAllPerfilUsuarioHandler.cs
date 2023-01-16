@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace Application.Services.UsuarioPerfil.QueryHandlers
 {
     internal class GetAllPerfilUsuarioHandler :
-        IRequestHandler<GetAllPerfilUsuario, OperationResult<IEnumerable<UserProfile>>>
+        IRequestHandler<GetAllPerfilUsuario, OperationResult<IEnumerable<PerfisUsuarios>>>
     {
         private readonly DataContext _ctx;
 
@@ -22,10 +22,10 @@ namespace Application.Services.UsuarioPerfil.QueryHandlers
             _ctx = ctx;
         }
 
-        public async Task<OperationResult<IEnumerable<UserProfile>>> Handle(GetAllPerfilUsuario request, 
+        public async Task<OperationResult<IEnumerable<PerfisUsuarios>>> Handle(GetAllPerfilUsuario request, 
                                                                         CancellationToken cancellationToken)
         {
-            OperationResult<IEnumerable<UserProfile>> result = new();
+            OperationResult<IEnumerable<PerfisUsuarios>> result = new();
 
             result.Payload = await _ctx.PerfilUsuario.ToListAsync(cancellationToken);
             return result;

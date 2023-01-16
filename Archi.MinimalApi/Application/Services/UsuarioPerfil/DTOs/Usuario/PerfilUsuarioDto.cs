@@ -14,7 +14,7 @@ namespace Application.Services.UsuarioPerfil.DTOs.Usuario
         public Guid PerfilUsuarioId { get; set; }
         public UsuarioDto Usuarios { get; set; }
 
-        public static PerfilUsuarioDto FromPerfilUsuario(UserProfile perfil)
+        public static PerfilUsuarioDto FromPerfilUsuario(PerfisUsuarios perfil)
         {
             var usarioPerfil = new PerfilUsuarioDto { PerfilUsuarioId = perfil.UsuarioPerfilId };
             usarioPerfil.Usuarios = UsuarioDto.FromUsuario(perfil.Usuario);
