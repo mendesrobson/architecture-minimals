@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GPa+QIM86NYvCaGYucmI08psk3YcumKjS8AJe0/xn+TbcbA9COkslIruEjLRGwvpglGhosIYLZImcgbDL23mnw==",
+  "success": true,
+  "projectFilePath": "D:\\11 - Source\\repos\\architecture-minimals\\Archi.MinimalApi\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\robso\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

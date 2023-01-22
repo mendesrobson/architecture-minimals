@@ -1,0 +1,5 @@
+D:\11 - Source\repos\architecture-minimals\App.Presentation\obj\Debug\net7.0\App.Presentation.csproj.AssemblyReference.cache
+D:\11 - Source\repos\architecture-minimals\App.Presentation\obj\Debug\net7.0\App.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+D:\11 - Source\repos\architecture-minimals\App.Presentation\obj\Debug\net7.0\App.Presentation.AssemblyInfoInputs.cache
+D:\11 - Source\repos\architecture-minimals\App.Presentation\obj\Debug\net7.0\App.Presentation.AssemblyInfo.cs
+D:\11 - Source\repos\architecture-minimals\App.Presentation\obj\Debug\net7.0\App.Presentation.csproj.CoreCompileInputs.cache
