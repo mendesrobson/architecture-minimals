@@ -5,7 +5,6 @@ public class ErroResponse
     public ErroResponse()
     {
         Erros = new();
-
     }
 
     public int StatusCode { get; set; }

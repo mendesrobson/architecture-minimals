@@ -1,29 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace App.Domain.Aggregates.Produtos
+﻿namespace App.Domain.Aggregates.Produtos
 {
-    internal class ProdutosAggregate
+    public class ProdutoAggregate
     {
-        private ProdutosAggregate() { }
+        private ProdutoAggregate() { }
 
         public Guid IdProduto { get; private set; }
         public string Nome { get; private set; }
-
         public decimal Preco { get; private set; }
-
         public List<string> Tags { get; private set; }
         public DateTime DataCriacao { get; private set; }
         public DateTime DataModificacao { get; private set; }
 
-        public static ProdutosAggregate CreateProdutos(string nome,
-                                                            decimal preco,
-                                                            List<string> tags)
+        public static ProdutoAggregate CreateProdutos(string nome,
+                                                      decimal preco,
+                                                       List<string> tags)
         {
-            return new ProdutosAggregate
+            return new ProdutoAggregate
             {
                 IdProduto = Guid.NewGuid(),
                 Nome = nome,
@@ -40,5 +32,4 @@ namespace App.Domain.Aggregates.Produtos
         //    DataModificacao = DateTime.UtcNow;
         //}
     }
-}
 }

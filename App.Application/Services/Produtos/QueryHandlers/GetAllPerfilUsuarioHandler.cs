@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace App.Application.Services.UsuarioPerfil.QueryHandlers
 {
     internal class GetAllPerfilUsuarioHandler :
-        IRequestHandler<GetAllPerfilUsuario, OperationResult<IEnumerable<PerfisUsuarios>>>
+        IRequestHandler<GetAllProdutos, OperationResult<IEnumerable<PerfisUsuarios>>>
     {
         private readonly DataContext _ctx;
 
@@ -17,7 +17,7 @@ namespace App.Application.Services.UsuarioPerfil.QueryHandlers
             _ctx = ctx;
         }
 
-        public async Task<OperationResult<IEnumerable<PerfisUsuarios>>> Handle(GetAllPerfilUsuario request,
+        public async Task<OperationResult<IEnumerable<PerfisUsuarios>>> Handle(GetAllProdutos request,
                                                                         CancellationToken cancellationToken)
         {
             OperationResult<IEnumerable<PerfisUsuarios>> result = new();

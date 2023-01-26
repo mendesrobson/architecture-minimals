@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace App.Application.Services.UsuarioPerfil.QueryHandlers;
 
 internal class GetByIdPerfilUsuarioHandler :
-    IRequestHandler<GetByIdPerfilUsuario, OperationResult<PerfilUsuarioDto>>
+    IRequestHandler<GetByIdProdutos, OperationResult<PerfilUsuarioDto>>
 {
     private readonly DataContext _ctx;
 
@@ -18,7 +18,7 @@ internal class GetByIdPerfilUsuarioHandler :
         _ctx = ctx;
     }
 
-    public async Task<OperationResult<PerfilUsuarioDto>> Handle(GetByIdPerfilUsuario request,
+    public async Task<OperationResult<PerfilUsuarioDto>> Handle(GetByIdProdutos request,
                                                     CancellationToken cancellationToken)
     {
         OperationResult<PerfilUsuarioDto> result = new();
